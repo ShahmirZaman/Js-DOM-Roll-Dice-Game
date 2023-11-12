@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg,#b12830 0%,#9d2b44 50%,#6b3074 100%);
+}
+.start-container {
+    width: 60%;
+    height: 80%;
+    background-color: #ffffff;
+    position: absolute;
+    border-radius: 20px;
+    background-color: #d6a4af;
+}
+.start-container .title {
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 1px;
+    color: #b12830;
+}
+.start-container .guidelines {
+    margin-top: 20px;
+    padding: 10px;
+}
+.guidelines h3 {
+    color: #b12830;
+}
+.guidelines ul {
+    padding: 10px;
+}
+.guidelines li {
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 5px;
+}
+.start-container .players-entry {
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.players-entry input {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    background-color: #9d2b44;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    color: #ffffff;
+}
+.players-entry input::placeholder {
+    color: #ffffff;
+    font-weight: 300;
+}
+.players-entry h3 {
+    color: #9d2b44;
+}
+.start-container .start-btn {
+    margin-top: 60px;
+    padding: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.start-btn button {
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    background-color:  #9d2b44;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+.start-btn button:hover {
+    background-color: #a96d90;
+}
+.container {
+    width: 60%;
+    height: 80%;
+    /* display: flex; */
+    position: relative;
+    display: none;
+}
+.container .section1 {
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #d6a4af;
+}
+.container .section2 {
+    width: 50%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #a96d90;
+
+}
+.container .center {
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    left: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.center #dice-img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    display: none;
+}
+#new-game-btn {
+    padding: 10px 40px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 15px;
+    border-radius: 20px;
+    background: transparent;
+    border:2px solid #b83c60;
+}
+#new-game-btn:hover {
+    background-color: #b12830;
+}
+#roll-dice-btn {
+    padding: 10px 40px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 15px;
+    border-radius: 20px;
+    background: transparent;
+    border:2px solid #b83c60;
+}
+#roll-dice-btn:hover {
+    background-color: #b12830;
+}
+#hold-btn {
+    /* margin-bottom: 100px; */
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 15px;
+    border-radius: 20px;
+    background: transparent;
+    border:2px solid #b83c60;
+}
+#hold-btn:hover {
+    background-color: #b12830;
+}
+.btn-div {
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.player-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.current-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 50px;
+    height: 110px;
+    text-transform: uppercase;
+    font-weight: 300;
+    border:2px solid #b83c60;
+    border-radius: 10px;
+    background-color: #9d2b44;
+    color: #ffffff;
+}
+.playerturn1 {
+    padding: 20px;
+    border-radius: 15px;
+    position: absolute;
+    z-index: 3;
+    left: 5%;
+    color: #ffffff;
+    background-color: #d6a4af;
+    display: none;
+}
+.playerturn2 {
+    padding: 20px;
+    border-radius: 15px;
+    position: absolute;
+    z-index: 3;
+    right: 5%;
+    color: #ffffff;
+    background-color: #a96d90;
+    display: none;
+}
+.playerwon1 {
+    color: #ffffff;
+    background-color: black;
+    padding: 50px;
+    font-size: 30px;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 3;
+    border-radius: 25px;
+    animation-name: won1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    display: none;
+}
+.playerwon2 {
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 50px;
+    font-size: 30px;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 4;
+    border-radius: 25px;
+    animation-name: won2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    display: none;
+}
+@keyframes won1 {
+    0%   {background-color:#d6a4af; left:0px; top:0px;}
+  25%  {background-color:#a96d90; left:200px; top:0px;}
+  50%  {background-color:#b12830; left:200px; top:200px;}
+  75%  {background-color:#9d2b44; left:0px; top:200px;}
+  100% {background-color:#6b3074; left:0px; top:0px;}
+}
+@keyframes won2 {
+    0%   {background-color:#d6a4af; right:0px; bottom:0px;}
+  25%  {background-color:#a96d90; right:200px; bottom:0px;}
+  50%  {background-color:#b12830; right:200px; bottom:200px;}
+  75%  {background-color:#9d2b44; right:0px; bottom:200px;}
+  100% {background-color:#6b3074; right:0px; bottom:0px;}
+}

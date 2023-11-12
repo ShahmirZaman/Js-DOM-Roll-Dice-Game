@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll Dice Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="start-container">
+            <div class="title">
+                <h1>Roll Dice Game</h1>
+            </div>
+            <div class="guidelines">
+                <h3>Game Guidelines</h3>
+                <ul>
+                    <li>Players have to score by clicking roll dice button.</li>
+                    <li>If dice number will be 1 then the player turn will be switch on the otherhand current score of player will be 0.</li>
+                    <li>For this,player should used the hold button so that its score will be not 0 and the turn will also switch.</li>
+                    <li>Last but not least, from both of players whose score reached to 50 first then that player will win the game.</li>
+                </ul>
+            </div>
+            <div class="players-entry">
+                <label><h3>Player1:-</h3>
+                    <input type="text" name="pname1" id="pname1" placeholder="Enter your name here:">
+                </label>
+                <label><h3>Player2:-</h3>
+                    <input type="text" name="pname2" id="pname2" placeholder="Enter your name here:">
+                </label>
+            </div>
+            <div class="start-btn">
+                <button id="btn-start">Start</button>
+            </div>
+        </div>
+        <div class="playerturn1">
+            <h2 class="turn-text1">PLAYER1 TURN</h2>
+        </div>
+        <div class="container">
+            <div class="section1">
+                <div class="player-details">
+                    <h1 id="playername1">Player 1</h1>
+                    <h1 id="totalscorep1">Total Score</h1>
+                </div>
+                <div class="current-score">
+                    <h3>Current</h3>
+                    <h3 id="scorep1">Score</h3>
+                </div>
+            </div>
+            <div class="center">
+                <button id="new-game-btn">New Game</button>
+                <img id="dice-img" src="./Assets/Dice-1.png" alt="Dice">
+                <div class="btn-div">
+                    <button id="roll-dice-btn">Roll Dice</button>
+                    <button id="hold-btn">Hold</button>
+                </div>
+            </div>
+            <div class="section2">
+                <div class="player-details">
+                    <h1 id="playername2">Player 2</h1>
+                    <h1 id="totalscorep2">Total Score</h1>
+                </div>
+                <div class="current-score">
+                    <h3>Current</h3>
+                    <h3 id="scorep2">Score</h3>
+                </div>
+            </div>
+        </div>
+        <div class="playerturn2">
+            <h2 class="turn-text2">PLAYER2 TURN</h2>
+        </div>
+        <div class="playerwon1">
+            Player1 Won
+        </div>
+        <div class="playerwon2">
+            Player2 Won
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
